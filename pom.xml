@@ -28,12 +28,25 @@
 		</dependency>
 
 		<!-- Dependency for JSTL to be added -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 		
 		<!-- Dependency for jaxb-api to be added(if using JDK9) -->
 
 		<!-- Dependency for jaxb-impl to be added(if using JDK9) -->
 
 		<!-- Dependency for Spring Test to be added -->
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+		<dependency>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-test</artifactId>
+    		<version>5.3.2</version>
+    		<scope>test</scope>
+		</dependency>
+		
 
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -62,6 +75,10 @@
   <build>
   <pluginManagement>
 			<plugins>
+			<plugin>
+				    <artifactId>maven-surefire-plugin</artifactId>
+				    <version>2.22.2</version>
+			    </plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
